@@ -1,0 +1,74 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 14/01/2017, 20:35:37
+    Author     : Angelo
+*/
+           
+
+/* Botones */
+.button
+		{
+			position: relative;
+			display: inline-block;
+			margin-top: 2em;
+			padding: 0.90em 1.5em;
+			background: #1c3b92;
+			border-radius: 40px;
+			text-decoration: none;
+			text-transform: uppercase;
+			font-size: 1.1em;
+			color: #FFF;
+			-moz-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-webkit-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-o-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			-ms-transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			transition: color 0.35s ease-in-out, background-color 0.35s ease-in-out;
+			cursor: pointer;
+		}
+
+			.button:hover
+			{
+				background: #08088A;
+				color: #FFF !important;
+			}
+/* Datagrid */
+	body {
+  font: normal medium/1.4 sans-serif;
+  background: linear-gradient( 0deg, #C0C0C0   , #F8F8F8);}
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+th, td {
+  padding: 0.25rem;
+  border: 1px solid #ccc;
+}
+tbody tr:nth-child(odd) {
+  background: #eee;
+}
+.centro{
+  padding: 0.5rem;
+  background: #484848 ;
+  color: white;
+  text-align: center;
+  font-size: 21px;
+
+}
+
+#cuadro{
+	width: 90%;
+	background: #F8F8F8 ;
+	padding: 25px;
+	margin: 5px auto;
+	border: 3px solid #1c3b92;
+}
+#titulo{
+	width: 100%;
+	background: rgb(6, 52, 116);
+	color:white;
+
+}

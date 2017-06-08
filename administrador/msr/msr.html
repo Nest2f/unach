@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>AGREGAR EMISOR</title>
+        <meta charset="windows-1252">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../css/estilocuerpo_1.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/links.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/hojadeestilos_2.css" />
+        <script>
+            function validar()
+            {
+                if (!datos.ides.value)
+                {
+                    alert("Ingrese el ID del Estado");
+                    datos.ides.focus();
+                    return false;
+                }
+                else {
+                    if (!/^[0-9]/.test(datos.ides.value)) {
+                        alert("Ingrese datos validos!");
+                        datos.ides.focus();
+                        return false;
+                    }
+                }
+                if (!datos.nombrees.value)
+                {
+                    alert("Ingrese la DescripciÃ³n del Estado");
+                    datos.nombrees.focus();
+                    return false;
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <a href="../../administrador/estado_doc/mostrar_estado_documento.php" style="border-style: none;box-shadow: none;"> <img src="../../imagenes/regresar.png" alt="Regresar" width="55" height="55" > </a>
+        <div id="container_demo">
+            <div id="wrapper">
+                <form name="datos" method="post" onsubmit="return validar(this)" enctype="multipart/form-data" action="msr.php">
+                    <br><h1> REGISTRO DE ESTADOS DEL DOCUMENTO</h1> 
+                    <p class="caja texto"> 
+                        <label for="Nombresinicio" class="uname" data-icon="p">ID del Emisor </label>
+                        <input name="ides" type="text" placeholder="Ejm: 1 "/>
+                    </p>
+                    <p class="caja texto"> 
+                        <label for="apellidosinicio" class="uname" data-icon="e" >Descripción del Emisor</label>
+                        <input name="nombrees" type="text" placeholder="Ejm: Decanato"/>
+                    </p>
+                    <p class="signin button">   
+                        <input type="submit" name="btncarpeta" value="CREAR">                  
+                    </p>              
+                </form>         
+            </div>                  
+        </div>
+    </body>
+</html>

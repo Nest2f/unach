@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="../../css/estilocuerpo_1.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/hojadeestilos_2.css" />
+        <link rel="stylesheet" type="text/css" href="../../css/links.css" />
+        <title>TIPO DE USUARIO</title>      
+        <script>
+            function validard()
+            {
+                if (!datos.idtu.value)
+                {
+                    alert("Ingrese el ID del Tipo de Usuario");
+                    datos.idtu.focus();
+                    return false;
+                }
+                else {
+                    if (!/^[0-9]/.test(datos.idtu.value)) {
+                        alert("Ingrese datos validos!");
+                        datos.idtu.focus();
+                        return false;
+                    }
+                }
+                if (!datos.nombretu.value)
+                {
+                    alert("Ingrese la Descripción del Tipo");
+                    datos.nombretu.focus();
+                    return false;
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <a href="../../administrador/tipo_usuario/mostrar_tipo_usuario.php" style="border-style: none;box-shadow: none;"> <img src="../../imagenes/regresar.png" alt="Regresar" height="55" width="55" > </a>
+        <div id="container_demo">
+            <div id="wrapper">
+                <form name="datos" method="post" onsubmit="return validard(this)" enctype="multipart/form-data" action="tusuario.php">
+                    <br><h1> REGISTRO DE TIPOS DE USUARIOS</h1> 
+                    <p class="caja texto"> 
+                        <label for="Nombresinicio" class="uname" data-icon="p">ID del Tipo </label>
+                        <input name="idtu" type="text" placeholder="ejm: 1 "/>
+                    </p>
+                    <p class="caja texto"> 
+                        <label for="apellidosinicio" class="uname" data-icon="u" >Descripción del Tipo </label>
+                        <input name="nombretu" type="text" placeholder="ejm: Docente/Secretari@"/>
+                    </p>
+                    <p class="signin button">   
+                        <input type="submit" name="btncarpeta" value="CREAR">                  
+                    </p>              
+                </form>            
+            </div>                  
+        </div>
+    </body>
+</html>
