@@ -12,10 +12,10 @@
  * @author Angelo
  */
 class connect {
-    private $host="localhost";
-    private $user="Nest";
-    private $password="12345";
-    private $database="fs_unach_sistemas";   
+    private $host="ayungan.me";
+    private $user="fs_unach";
+    private $password="fs_unach";
+    private $database="fs_unach";   
     private $connnect;
    public function conectar( $consulta) {
       $this->connnect=new mysqli($this->host, $this->user, $this->password, $this->database);//abre la coneccion con los datos

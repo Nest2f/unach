@@ -8,8 +8,7 @@ $(document).ready(function () {
         var id_archivo = this.value;
         data.append('documento_tipo', documento_tipo);
         data.append('id_archivo', id_archivo);
-
-        var notify = $.notify('<strong>Actualizando</strong> No cierre ésta página...', {
+       var notify = $.notify('Updating Do not close this page...', {
             allow_dismiss: false,
             showProgressbar: true
         });
