@@ -7,9 +7,12 @@
     display: none;
 }
 .ventanaDatos{
+ 
+    padding: 2%;
+    position: relative;
     z-index: 21;
     width: 40%;
-    height: 40%;
+    height: 70%;
     background-color: #5b5b61;
     margin-left: 30%;
     margin-top: 10%;
@@ -19,12 +22,39 @@
     box-shadow: 10px -5px 10px #5b5b61, -10px 5px 10px #5b5b61;
 
 }
-#salir{
-    float: bottom;
-    position:absolute; /*El div será ubicado con relación a la pantalla*/
-    left:0px; /*A la derecha deje un espacio de 0px*/
-    right:0px; /*A la izquierda deje un espacio de 0px*/
-    bottom:0px; /*Abajo deje un espacio de 0px*/
-    height:50px; /*alto del div*/
+.ventanaDatos.cargaArchivo{
+    height: 95%;
+    padding: 0%;
+    margin: 0%;
+    width: 100%;
 }
-
+.ventanaDatos.botones{
+    height: 5%;
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
+    
+}
+#salir{
+/*    float: bottom;
+    position:relative; El div será ubicado con relación a la pantalla
+    left:0px; A la derecha deje un espacio de 0px
+    right:0px; A la izquierda deje un espacio de 0px
+    bottom:0px; Abajo deje un espacio de 0px
+    height:50px; alto del div*/
+}
+h4{
+    color: white;
+    float: left;
+}
+input[type="file"]{
+    color: white;
+}
+#archivoNombreView{
+    color: white;
+    font-size: 20px;
+    color: white;
+}
+#viewArchivo{
+    
+}

@@ -6,16 +6,18 @@ and open the template in the editor.
 -->
 <html lang="es" xml:lang="es">
     <head>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="../bower_components/jquery/dist/jquery.min.js"></script>
         <!--        <meta charset="UTF-8">-->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="../js/bootstrap-notify/bootstrap-notify.min.js"></script>
-      
+
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <script src="../js/app.js"></script>
-       
-        
+
+
         <link rel="stylesheet" href="../css/view_archivo.css">
+        <link rel="stylesheet" href="../css/font-awesome-4.7.0/css/font-awesome.min.css">
+      
         <title></title>
         <script>
             function abrir(url) {
@@ -27,12 +29,22 @@ and open the template in the editor.
     </head>
     <body>
         <div class="ventana">
-            <div class="ventanaDatos">                
-                <input type="file" name="Archivo" value="Datos" class="btn btn-info" id="crear_archivo">                
-               
-                <div class="row">
-                    <button id="salir"class="btn btn-danger glyphicon glyphicon-remove" > Cancelar</button>
-                    <input type="submit" name="Subir" value="Actualizar" class="btn btn-info glyphicon glyphicon-upload">
+
+            <div class="ventanaDatos">
+                <div class="ventanaDatos cargaArchivo">
+                    <i class="fa fa-file-archive-o fa-3x " id="archivoNombreView"  aria-hidden="true"></i>
+                    <br>
+                    <embed id="viewArchivo" src="" type="application/pdf" width="100%" height="80%"/>
+                    <div class="anadirInputArchivo">
+                        <input id="inputarchivo" type="file" class="file"> 
+                    </div>
+                                   
+
+                </div>
+
+                <div class="ventanaDatos botones">
+                    <button id="salir" class="btn btn-danger glyphicon glyphicon-remove" > Cancelar</button>
+                    <button  id="updatefilenow"class="btn btn-info glyphicon glyphicon-floppy-open">Actualizar</button>
                 </div>
             </div>
         </div>
@@ -43,9 +55,9 @@ and open the template in the editor.
         require_once '../modelo/connect.php';
         require_once '../controlador/controladorDocumento.php';
         require_once '../controlador/controladorEstado.php';
-        
+
         $contrArchivo = new controladorDocumento();
-        $contrDocumento = new controladorEstado();       
+        $contrDocumento = new controladorEstado();
 
 
         $resulArch = $contrArchivo->cargarDatos();
@@ -76,10 +88,11 @@ and open the template in the editor.
                             ?>
                         </select></td>
                     <td><?php echo $dat["Fecha_Archivacion"]; ?></td>
-                    <td><button id="id_archivo_edit"  class="btn btn-info glyphicon glyphicon-refresh"> Editar</button></td>
+                    <td><button   class="id_archivo_edit btn btn-info glyphicon glyphicon-refresh" value="<?php echo $dat["Directorio_Documento"]; ?>"> Editar</button></td>
                 </tr>
             <?php } ?>
         </table>
+        
     </body>
 </html>
 
