@@ -1,4 +1,6 @@
 $(document).ready(function () {
+    var documento_id;
+    var documento_directorio;
 
     $('select').on('change', function () {
         // alert(id_archivo + "->" + documento_tipo);
@@ -37,11 +39,18 @@ $(document).ready(function () {
     $('.id_archivo_edit').click(function () {
         $('.ventana').css({"display": "inline"});
         var nombre_archivo = $(this).val();//optiene nombre del archivvo
-        $('#viewArchivo').attr('src', 'documentos/' + nombre_archivo);//muestra
+       var elem= nombre_archivo.split(':');
+        documento_directorio=elem[1];
+        documento_id=elem[0];
+       
+        
+                
+        $('#viewArchivo').attr('src', 'documentos/' + documento_directorio);//muestra
         //muestra nombre de archivo
-        $("#archivoNombreView").text("  " + nombre_archivo);
+        $("#archivoNombreView").text("  " + documento_directorio);
         $('#viewArchivo').css({"display": "inline"});
         //añade el imput para subir el archivo
+        
 
 
     });
@@ -74,9 +83,9 @@ $(document).ready(function () {
         var inputFileImage = document.getElementById("inputarchivo");
         var file = inputFileImage.files[0];
            
-          
+          alert(documento_id);
         var url = 'url a actualizar .php';
-        var Nume_Documento = "";
+        var Nume_Documento = documento_id;
          data.append('archivo',file);//para el 
         data.append('Nume_Documento', Nume_Documento);
         
