@@ -22,7 +22,7 @@ and open the template in the editor.
                 open(url, '', 'top=900,left=900,width=900,height=900');
             }
         </script>
-        <meta charset="UTF-8">
+<!--        <meta charset="UTF-8">-->
 
     </head>
     <body>
