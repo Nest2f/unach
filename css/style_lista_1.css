@@ -129,7 +129,7 @@ body {
   overflow: hidden;
   height: 28px;
   width: 150px;
-  background: #f2f2f2;
+  background: #8d8ca9;
   border: 1px solid;
   border-color: white #f7f7f7 #f5f5f5;
   border-radius: 3px;
@@ -282,7 +282,7 @@ th, td {
   border: 1px solid #ccc;
 }
 tbody tr:nth-child(odd) {
-  background: #eee;
+/*  background: #eee;*/
 }
 .centro{
   padding: 0.5rem;
@@ -302,9 +302,10 @@ tbody tr:nth-child(odd) {
 /*	border: 3px solid #1c3b92;*/
 }
 #titulo{
-	width: 90%;
-	background: #1c3b92;
+	width: auto;
+	background: #626365;
 	color:white;
+        /*text-align: left;*/
 
 }
 #titulo_1{
@@ -323,4 +324,7 @@ tbody{
 td{
     font-size: 15px;
 }
-/* Boton */
+/* Menu horizontal */
+#horizontal li {
+    display: inline;
+}

@@ -5,7 +5,7 @@ body {
 	font: 12px/18px Tahoma, Geneva, sans-serif;
 	color:#4d4d4d;
 	min-width:1147px;
-	background: #91abb5;
+	background: #f9f9f9;
 }
 .ic {border:0;float:right;background:#fff;color:#f00;width:50%;line-height:10px;font-size:10px;margin:-220% 0 0 0;overflow:hidden;padding:0}
 .bg {width:100%; background:url(../images/bg.jpg) center 0 repeat-x #d9e1e4;}

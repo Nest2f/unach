@@ -25,7 +25,7 @@ else{
                 <link rel="stylesheet" type="text/css" media="screen" href="../css/style_2.css">
       <style>               
                     body {
-		background-color: #CED8F6;
+/*		background-color: #CED8F6;*/
                 }               
                 * {
 				margin:0px;
@@ -113,7 +113,7 @@ else{
                         <p class="text-2">Registro de documentos a tu perfil.</p>              
                     </div>
                     <div class="box-1 border-right">
-                        <a href="mostrar_documento.php" style="border-style: none;box-shadow: none;"> <img src="../imagenes/documento.png" width="65" height="65" > </a>
+                        <a href="../vista/viewDocument.php" style="border-style: none;box-shadow: none;"> <img src="../imagenes/documento.png" width="65" height="65" > </a>
                         <span class="text-1">Visualizar Lista</span>
                         <p class="text-2">Lista de documentos agregados en tu perfil.</p>                         
                     </div>

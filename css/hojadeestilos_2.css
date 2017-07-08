@@ -164,7 +164,7 @@ input {
 	padding: 8px 5px;
 	font-family: 'BebasNeueRegular','Arial Narrow',Arial,sans-serif;
 	color: #fff;
-	font-size: 28px;	
+/*	font-size: 28px;	
 	border: 1px solid rgb(28, 108, 122);	
 	margin-bottom: 10px;	
 	text-shadow: 0 1px 1px rgba(0, 0, 0, 0.5);
@@ -183,7 +183,7 @@ input {
 	-webkit-transition: all 0.2s linear;
 	   -moz-transition: all 0.2s linear;
 	     -o-transition: all 0.2s linear;
-	        transition: all 0.2s linear;
+	        transition: all 0.2s linear;*/
 }
 #wrapper p.button input:hover
 {
@@ -195,10 +195,10 @@ input {
 	background: rgb(40, 137, 154);
 	position: relative;
 	top: 1px;
-	border: 1px solid rgb(12, 76, 87);	
+/*	border: 1px solid rgb(12, 76, 87);	
 	-webkit-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
 	   -moz-box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
-	        box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;
+	        box-shadow: 0px 1px 6px 4px rgba(0, 0, 0, 0.2) inset;*/
 }
 /*cuak para botones margen derecho*/
 p.login.button,

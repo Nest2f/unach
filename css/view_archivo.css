@@ -7,7 +7,7 @@
     display: none;
 }
 .ventanaDatos{
- 
+
     padding: 2%;
     position: relative;
     z-index: 21;
@@ -33,15 +33,15 @@
     width: 100%;
     padding: 0%;
     margin: 0%;
-    
+
 }
 #salir{
-/*    float: bottom;
-    position:relative; El div será ubicado con relación a la pantalla
-    left:0px; A la derecha deje un espacio de 0px
-    right:0px; A la izquierda deje un espacio de 0px
-    bottom:0px; Abajo deje un espacio de 0px
-    height:50px; alto del div*/
+    /*    float: bottom;
+        position:relative; El div será ubicado con relación a la pantalla
+        left:0px; A la derecha deje un espacio de 0px
+        right:0px; A la izquierda deje un espacio de 0px
+        bottom:0px; Abajo deje un espacio de 0px
+        height:50px; alto del div*/
 }
 h4{
     color: white;
@@ -56,5 +56,15 @@ input[type="file"]{
     color: white;
 }
 #viewArchivo{
-    
+
+}
+#cuadro{
+	width: auto;
+/*	background: #F8F8F8 ;*/
+	padding: 25px;
+	margin: 5px auto;
+/*	border: 3px solid #1c3b92;*/
+}
+a{
+    float:right;
 }

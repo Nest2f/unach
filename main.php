@@ -1,22 +1,20 @@
 <!DOCTYPE html>
 <?php
 require_once './connect_db.php';
-if(isset($_COOKIE['nueva'])){
+if (isset($_COOKIE['nueva'])) {
     session_start();
-   switch ($_SESSION['Id_Tipo_Usuario'])
- {
-     case 1:
-         header("refresh:0;url=administrador/menu.php");
-         break;
-     case 2:
-         header("refresh:0;url=secretaria/menu.php");
-         break;
-     case 3:
-         header("refresh:0;url=docente/menu.php");
-         break;
- }  
-}
-else{    
+    switch ($_SESSION['Id_Tipo_Usuario']) {
+        case 1:
+            header("refresh:0;url=administrador/menu.php");
+            break;
+        case 2:
+            header("refresh:0;url=secretaria/menu.php");
+            break;
+        case 3:
+            header("refresh:0;url=docente/menu.php");
+            break;
+    }
+} else {
     ?>
     <html>
         <head>
@@ -38,13 +36,13 @@ else{
 
                 .body{
                     position: absolute;
-                    top: -20px;
-                    left: -20px;
-                    right: -40px;
-                    bottom: -40px;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
                     width: auto;
                     height: auto;
-                    background-image: url(images/biibliotecas.png);
+                    background-color: #D8D8D8;
                     background-size: cover;
                     -webkit-filter: blur(5px);
                     z-index: 0;
@@ -52,27 +50,27 @@ else{
 
                 .grad{
                     position: absolute;
-                    top: -20px;
-                    left: -20px;
-                    right: -40px;
-                    bottom: -40px;
+                    top: 0px;
+                    left: 0px;
+                    right: 0px;
+                    bottom: 0px;
                     width: auto;
                     height: auto;
-                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.65))); /* Chrome,Safari4+ */
+                    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(255, 255, 255, 0.65))); /* Chrome,Safari4+ */
                     z-index: 1;
                     opacity: 0.7;
                 }
 
                 .header{
                     position: absolute;
-                    top: calc(50% - 35px);
-                    left: calc(50% - 255px);
+                    top: calc(38% - 35px);
+                    left: calc(47% - 255px);
                     z-index: 2;
                 }
 
                 .header div{
                     float: left;
-                    color: #fff;
+                    color: #424242;
                     font-family: 'Exo', sans-serif;
                     font-size: 32px;
                     font-weight: 200;
@@ -96,22 +94,22 @@ else{
                     width: 250px;
                     height: 30px;
                     background: transparent;
-                    border: 1px solid rgba(255,255,255,0.6);
+                    border: 1px solid rgba(78, 141, 251, 0.46);
                     border-radius: 2px;
-                    color: #fff;
+                    color: #424242;
                     font-family: 'Exo', sans-serif;
                     font-size: 16px;
                     font-weight: 400;
-                    padding: 4px;
+                    padding: 4px;                    
                 }
 
                 .login input[type=password]{
                     width: 250px;
                     height: 30px;
                     background: transparent;
-                    border: 1px solid rgba(255,255,255,0.6);
+                    border: 1px solid rgba(78, 141, 251, 0.46);
                     border-radius: 2px;
-                    color: #fff;
+                    color: #424242;
                     font-family: 'Exo', sans-serif;
                     font-size: 16px;
                     font-weight: 400;
@@ -132,6 +130,7 @@ else{
                     font-weight: 400;
                     padding: 6px;
                     margin-top: 10px;
+                    
                 }
 
                 .login input[type=submit]:hover{
@@ -157,14 +156,15 @@ else{
                 }
 
                 ::-webkit-input-placeholder{
-                    color: rgba(255,255,255,0.6);
+                    color: rgba(0, 0, 0, 0.46);
                 }
 
                 ::-moz-input-placeholder{
-                    color: rgba(255,255,255,0.6);
+                    color: rgba(0, 0, 0, 0.46);
                 }
             </style>    
-            <script src="js/prefixfree.min.js"></script>
+<!--            <script src="js/prefixfree.min.js"></script>-->
+            <link href='css/style_hmain.css' rel='stylesheet' type='text/css'>
             <script>
                 function validar()
                 {
@@ -186,12 +186,22 @@ else{
             </script>
         </head>
         <body>
-            <div class="body">           
+            
+            <div class="body">
+                
             </div>
             <div class="grad">
+                <ul>                
+                <li><a href="http://www.unach.edu.ec">Página Oficial UNACH</a></li>
+                <li><a href="guest.php">Acceder como Invitado</a></li>
+                <li><a href="#news">Documentación del Sistema</a></li>
+                <li style="float:right"><a class="active" href="#about">Acerca de..</a></li>
+            </ul>
             </div>                  
-            <div class="header">                        
-                <div>Usuario</div>
+            <div class="header">                
+                <div>Usuario<img src="images/sysc.png" align="left">                    
+                </div>
+                
             </div>
             <br>
             <div class="login">
@@ -200,7 +210,7 @@ else{
                     <input type="password" placeholder="Contraseña" name="password"/><br>
                     <input type="submit" value="Acceder" >
                     <br>
-<!--                    <input type="checkbox" name="activo" id="loginkeeping" value="on"/> 
+    <!--                    <input type="checkbox" name="activo" id="loginkeeping" value="on"/> 
                     <label for="loginkeeping">Mantener la sesión activa</label>                    -->
                 </form>
                 <form method="POST" name="dato"  action="guest.php">
@@ -210,6 +220,6 @@ else{
             <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
         </body>
     </html>
-<?php 
+    <?php
 }
 ?>

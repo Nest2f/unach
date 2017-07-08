@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html class="no-js">
     <head>
-        <title>MEN&#218 ADMINISTRADOR</title>
+        <title>Menú de Administración</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <link rel="stylesheet" type="text/css" href="../css/estilocuerpo_1.css" />
@@ -12,7 +12,7 @@
         <style>
 
             body {
-                background-color: #CED8F6;
+                background-color: #ffffff;
             }               
             * {
                 margin:0px;

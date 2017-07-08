@@ -1,6 +1,5 @@
 <?php
-//require_once '../Include/nusoap-0.9.5/lib/nusoap.php';
-//$cliente= new nusoap_client('http://localhost:8080/unach/secretaria/servidor_secretaria.php');
+
 include '../connect_db.php';
 $query="select * from departamento;";
 $res= mysqli_query($conex,$query);

@@ -108,7 +108,7 @@ and open the template in the editor.
         <a href="menu.php" style="border-style: none;box-shadow: none;"> <img src="../imagenes/regresar.png" alt="Regresar" width="55" height="55" > </a>
         <div id="container_demo" >
             <div id="wrapper">
-                <form  name="datos" method="post"  action="registrodocumento.php" onsubmit="return validar(this)" enctype="multipart/form-data">
+                <form  name="datos" method="post"  action="../vista/registrodocumento.php" onsubmit="return validar(this)" enctype="multipart/form-data">
                     <br> <h1> REGISTRO DE DOCUMENTOS </h1>
                     <table><tr><td id="td_1">
                                 <p> 

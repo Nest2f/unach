@@ -3,7 +3,6 @@ $(document).ready(function () {
     var documento_directorio;
 
     $('select').on('change', function () {
-        // alert(id_archivo + "->" + documento_tipo);
         var data = new FormData();//ogeto con datos
         var url = './vistaDocumento.php';
         var documento_tipo = this.options[this.selectedIndex].text;
@@ -82,9 +81,7 @@ $(document).ready(function () {
         var data = new FormData();//ogeto con datos
         var inputFileImage = document.getElementById("inputarchivo");
         var file = inputFileImage.files[0];
-           
-          alert(documento_id);
-        var url = 'url a actualizar .php';
+        var url = './UploadFiles.php';
         var Nume_Documento = documento_id;
          data.append('archivo',file);//para el 
         data.append('Nume_Documento', Nume_Documento);
@@ -145,12 +142,13 @@ $(document).ready(function () {
     //mostrar Notificacion Correcto
     function mostrarCorrectNofity(msg, notify) {
         //si la respuesta de msg es 1 fue correcto si no hubo un error 
+       
         if (msg == 1) {
             setTimeout(function () {
                 notify.update({'type': 'success', 'message': '<strong>Update</strong>  Correct!..', 'progress': 100});
             }, 10);
         } else {
-            setTimeout(function () {
+            setTimeout(function () {                
                 notify.update({'type': 'danger', 'message': '<strong>Update</strong> Error in DB!..', 'progress': 100});
             }, 10);
         }
