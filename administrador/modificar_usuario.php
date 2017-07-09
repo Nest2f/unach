@@ -13,7 +13,7 @@
 	$direccion=isset($_POST['direccion'])?$_POST['direccion']:null;
         $depart=isset($_POST['depart'])?$_POST['depart']:NULL;
         $cuenta=isset($_POST['acc'])?$_POST['acc']:null;
-        $id= isset($_POST['cedula'])?$_POST['cedula']:NULL;
+        $id= isset($_POST['Idh'])?$_POST['Idh']:NULL;
         
         $act="Update usuario set Us_Nombres='$nombres', Us_Apellidos='$apellidos', Us_Cedula='$cedula', Us_Password='$contrasenia',Us_repetir_password='$repcontrasenia', Us_Correo_electronico='$correoelectronico',	Us_Fecha_Nacimiento='$fechanacimiento',	Us_Sexo='$sexo',Us_Telefono='$telefono',Id_Tipo_Usuario='$tipousuario',	Us_Direccion='$direccion',Id_Departamento='$depart', Estado_Cuenta='$cuenta' where Us_Cedula='$id';";
         $res=mysqli_query($conex, $act);

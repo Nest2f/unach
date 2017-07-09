@@ -164,7 +164,8 @@ $re1=  mysqli_query($conex,$query1);
                <p> 
               <label for="cedulainicio" class="uname" data-icon="u" > Cedula </label>
               <input name="cedula" type="text" placeholder="ejm: 1500....." value="<?php echo $row['Us_Cedula'];  ?>"/>
-              </p>
+              <input hidden='true' type='text' name='Idh' value='<?php echo $row['Us_Cedula'];  ?>' />
+               </p>
                <p> 
               <label for="passinicio" class="youpasswd" data-icon="p" > Contraseña </label>
               <input name="contrasenia" type="password" placeholder="ejm: xdfw...." value="<?php echo $row['Us_repetir_password'];  ?>"/>
