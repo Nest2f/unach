@@ -28,7 +28,6 @@ if (isset($_COOKIE['nueva'])) {
                     margin: 0;
                     padding: 0;
                     background: #fff;
-
                     color: #fff;
                     font-family: Arial;
                     font-size: 12px;
@@ -210,8 +209,6 @@ if (isset($_COOKIE['nueva'])) {
                     <input type="password" placeholder="Contraseña" name="password"/><br>
                     <input type="submit" value="Acceder" >
                     <br>
-    <!--                    <input type="checkbox" name="activo" id="loginkeeping" value="on"/> 
-                    <label for="loginkeeping">Mantener la sesión activa</label>                    -->
                 </form>
                 <form method="POST" name="dato"  action="guest.php">
                     <input type="submit" value="Invitado">
