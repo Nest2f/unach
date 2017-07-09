@@ -14,4 +14,4 @@ include '../../connect_db.php';
             mysqli_query($conex, $insert);
             echo '<script>alert("Se ha ingresado correctamente")</script> ';
         }
-        header("refresh:0;url=tusuario.html");
+        header("refresh:0;url=mostrar_tipo_usuario.php");

@@ -14,4 +14,4 @@ include '../../connect_db.php';
             mysqli_query($conex, $insert);
             echo '<script>alert("Se ha ingresado correctamente el Estado.")</script> ';
         }
-        header("refresh:0;url=estadod.html");
+        header("refresh:0;url=mostrar_estado_documento.php");

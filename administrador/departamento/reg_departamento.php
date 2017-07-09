@@ -14,5 +14,5 @@ include '../../connect_db.php';
             mysqli_query($conex, $insert);
             echo '<script>alert("Se ha ingresado correctamente el Departamento.")</script> ';
         }
-        header("refresh:0;url=registrar_departamento.html");
+        header("refresh:0;url=mostrar_departamento.php");
 

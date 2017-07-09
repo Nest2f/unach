@@ -14,5 +14,5 @@
             mysqli_query($conex, $insert);
             echo '<script>alert("La Carpeta se ha registrado correctamente")</script> ';
         }
-        header("refresh:0;url=registrar_carpeta.php");
+        header("refresh:0;url=mostrar_carpeta.php");
        
