@@ -50,16 +50,16 @@ include '../../connect_db.php';
 	<div id="cuadro">
             <a href="../../administrador/menu.php" style="border-style: none;box-shadow: none;"> <img src="../../imagenes/regresar.png" alt="Regresar" width="55" height="55" > </a>
 		<center><img src="/unach/imagenes/tipo_accion.png" height="100" width="100"><br>
-                    <input type="submit" value="AGREGAR ACCIÓN" class="button" onclick="location='../tipo_accion/accion.html'">
+                    <input type="submit" value="AGREGAR OPERACIÓN" class="button" onclick="location='../tipo_accion/accion.html'">
                     <form name="datos1" method="REQUEST" action="eliminar_acc.php" >                     
-                        <label for="username" class="uname"  > ID DE LA ACCION: </label>
+                        <label for="username" class="uname"  > ID DE LA OPERACIÓN: </label>
                         <input name="Id1" type="text" placeholder="Ejm: 1"/>                                               
-                        <input type="submit" value="ELIMINAR ESTADO" class="button" onclick="return validar1(this)" />    
+                        <input type="submit" value="ELIMINAR OPERACIÓN" class="button" onclick="return validar1(this)" />    
                     </form>
                     <form name="datos2" method="REQUEST" action="modificar_acc.php">
-                        <label for="username" class="uname"  > ID DE LA ACCION: </label>
+                        <label for="username" class="uname"  > ID DE LA OPERACIÓN: </label>
                         <input name="Id2" type="text" placeholder="Ejm: 1"/>                                               
-                        <input type="submit" value="MODIFICAR ESTADO" class="button" onclick="return validar2(this)" /> 
+                        <input type="submit" value="MODIFICAR OPERACIÓN" class="button" onclick="return validar2(this)" /> 
                     </form><br>
                 <div id="titulo_1">
 		<center><h1>TIPOS DE ACCIONES</h1></center>
@@ -68,7 +68,7 @@ include '../../connect_db.php';
 		<table>
 			<thead>
 				<tr class="centro">
-					<td>Id Tipo Acción</td>
+					<td>Id Tipo Operación</td>
 					<td>Descripción</td>
 					
 				</tr>

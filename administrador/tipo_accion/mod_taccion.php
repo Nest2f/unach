@@ -6,7 +6,7 @@ include '../../connect_db.php';
             $bus="UPDATE tipo_accion SET Id_Tipo_Accion ='$idmod', Descripcion='$nommod' where  Id_Tipo_Accion='$idh';";
             $dix=  mysqli_query($conex, $bus);
             if ($dix==true) {
-                echo "<script> alert('Se ha modificado el Tipo de Acción exitosamente! ');</script>";
+                echo "<script> alert('Se ha modificado el Tipo de Operación exitosamente! ');</script>";
     
 }
 else{

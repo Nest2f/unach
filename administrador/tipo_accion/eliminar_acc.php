@@ -11,7 +11,7 @@ include '../../connect_db.php';
             
             if ($qry==TRUE) {       
                     header("refresh:0;url=mostrar_tipo_accion.php");
-                    echo "<script> alert('El tipo de acción ha sido eliminado correctamente! ');</script>";
+                    echo "<script> alert('El tipo de operación ha sido eliminado correctamente! ');</script>";
                     
             }
             else{
