@@ -94,9 +94,14 @@ and open the template in the editor.
                 </form><br></center>              
             <div id="titulo"><img src="../imagenes/i_doc.png" width="25" height="30"> Documentos añadidos</div><br>
             <table class="table table-striped" id="tablaDatos" >
-                <tr><th>Tipo de Documento</th><th>Emisor del Documento</th><th>Fecha del Documento</th>
-                    <th>Número de Documento</th><th>Descripción</th><th>Estado del Documento</th>
-                    <th>Fecha de Archivacion</th><th>Opciones</th></tr>
+                <tr><th>Tipo de Documento</th>
+                    <th>Emisor del Documento</th>
+                    <th>Fecha del Documento</th>
+                    <th>Número de Documento</th>
+                    <th>Descripción</th>
+                    <th>Estado del Documento</th>
+                    <th>Fecha de Archivacion</th>
+                    <th>Opciones</th></tr>
                 <?php while ($dat = mysqli_fetch_array($resulArch)) { ?>
                     <tr><td><?php echo $dat["Nombre_Tipo"]; ?></td>
                         <td><?php echo $dat["Descripcion_Emisor"]; ?></td>
