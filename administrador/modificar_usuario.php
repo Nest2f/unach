@@ -1,4 +1,4 @@
-       <?php
+ <?php
             include '../connect_db.php';
 	 $nombres = isset($_POST['nombres'])?$_POST['nombres']:null;
 	$apellidos=isset($_POST['apellidos'])?$_POST['apellidos']:null;
@@ -25,12 +25,6 @@
 else
 { 
     echo "<script>alert('Hubo un problema en la actualización!');</script>";
-    header("location:http://localhost:90/unach/administrador/mostrar_usuarios.php");
-
-    }
-
-
-
-        
-        
-       
+    //header("location.href=mostrar_usuarios.php");
+    echo "<script>location.href='mostrar_usuarios.php'</script>";
+    }       
