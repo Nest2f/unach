@@ -51,14 +51,14 @@ include '../../connect_db.php';
                 echo "<script> alert('No se han encontrado coincidencias! ');</script>"; 
             }
             else{
-                echo "<br><h1> DATOS DEL TIPO DE ACCIÓN </h1>
+                echo "<br><h1> DATOS DEL TIPO DE OPERACIÓN </h1>
                     <input hidden='true' type='text' name='Idh' value='$row[Id_Tipo_Accion]' />
               <p class='caja texto'> 
-              <label for='Nombresinicio' class='uname' data-icon='p'>ID Del Estado </label>
+              <label for='Nombresinicio' class='uname' data-icon='p'>ID de la Operación </label>
               <input name='Idcarp' type='tex' placeholder='ejm: 1 ' value='$row[Id_Tipo_Accion]'/>
               </p>
               <p class='caja texto'> 
-              <label for='apellidosinicio' class='uname' data-icon='e' > Nombre del Estado </label>
+              <label for='apellidosinicio' class='uname' data-icon='e' > Nombre de la Operación </label>
               <input name='Nombrecarp' type='text' placeholder='ejm: Varios ' value='$row[Descripcion]'/>
               </p> 
               <p class='signin button'>
