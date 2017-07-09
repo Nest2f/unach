@@ -1,3 +1,11 @@
+<?php
+require_once '../vendor/autoload.php';
+
+$contrArchivo = new controladorDocumento();
+$contrDocumento = new controladorEstado();
+$resulArch = $contrArchivo->cargarDatos();
+session_start();
+?>        
 <!DOCTYPE html>
 <!--
 To change this license header, choose License Headers in Project Properties.
@@ -56,18 +64,6 @@ and open the template in the editor.
                 </div>
             </div>
         </div>
-        <?php
-        require_once '../modelo/claseDocumento.php';
-        require_once '../modelo/claseEstadoDocumento.php';
-        require_once '../modelo/connect.php';
-        require_once '../controlador/controladorDocumento.php';
-        require_once '../controlador/controladorEstado.php';
-
-        $contrArchivo = new controladorDocumento();
-        $contrDocumento = new controladorEstado();
-        $resulArch = $contrArchivo->cargarDatos();
-        session_start();
-        ?>        
         <div id="cuadro">
             <center>
                 <div id="titulo_1" style="height: 35px; ">SISTEMA DE GESTIÓN DE ARCHIVOS</div></center>

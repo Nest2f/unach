@@ -14,7 +14,7 @@ class controladorDocumento extends connect {
 
     public function modificarDocumento($nume_documento, $id_estado_documento) {
         $this->conectar("UPDATE documento set Id_Estado_Documento='$id_estado_documento' WHERE Nume_Documento='$nume_documento';");
-        return 1;
+        echo 1;
     }
     public function actualizarDocumento($nume_documento,$archivo){
        $this->nume_documento=$nume_documento;
