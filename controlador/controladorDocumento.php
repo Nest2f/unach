@@ -20,10 +20,8 @@ class controladorDocumento extends connect {
        $this->nume_documento=$nume_documento;
        $this->archivo=$archivo;       
        $this->conectar("UPDATE documento SET Directorio_Documento='$this->archivo' where Nume_Documento='$this->nume_documento'");
-       echo 1;
-       
-       
+       echo 1;      
     }
-
+    
 
 }

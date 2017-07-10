@@ -32,6 +32,8 @@ and open the template in the editor.
         <link rel="stylesheet" type="text/css" href="../css/estilocuerpo.css" />
         <link rel="stylesheet" type="text/css" href="../css/hojadeestilos_3.css" />
         <link rel="stylesheet" type="text/css" href="../css/links.css" />
+        <link rel="stylesheet" type="text/css" href="../css/tcal.css" />
+        <script type="text/javascript" src="../js/tcal.js"></script> 
 
         <script>
             function validar()
@@ -47,7 +49,14 @@ and open the template in the editor.
                     alert("Ingrese la fecha de Emisión del Documento!");
                     datos.fecha_documento.focus();
                     return false;
-                }
+                }else
+               {
+                   if(!/^(19|20)+([0-9]{2})([-])([0-9]{1,2})([-])([0-9]{1,2})$/.test(datos.fecha_documento.value)){
+                     alert(" Fecha de Documento Invalido");
+                   datos.fecha_documento.focus();
+                   return false;  
+                   }
+               }
                 if (!datos.emisor.value)
                 {
                     alert("Ingrese el nombre del Emisor del Documento!");
@@ -121,7 +130,7 @@ and open the template in the editor.
                                 </p>
                                 <p> 
                                     <label for="apellidosinicio" class="uname" data-icon="e" > Fecha De Emisión del Documento </label>
-                                    <input name="fecha_documento" type="text" placeholder="Ejm: 2012-01..." value="<?php echo date("d/m/Y"); ?>" size="10"/>
+                                    <input name="fecha_documento" type="text" class="tcal" placeholder="Ejm: 2012-01..." value="<?php echo date("d/m/Y"); ?>" size="10"/>
                                 </p>
                                 <p> 
                                     <label for="cedulainicio" class="uname"  > Nombre del Emisor </label>
@@ -177,7 +186,7 @@ and open the template in the editor.
                                 </p>
                                 <p> 
                                     <label for="fechainicio" class="youpasswd" data-icon="e" > Fecha de la Archivación </label>
-                                    <input name="fecha_archivacion" type="text" placeholder="Ejm: 2014-10-11" value="<?php echo date("d/m/Y"); ?>" size="10"/>
+                                    <input name="fecha_archivacion" type="text" class="tcal" placeholder="Ejm: 2014-10-11" value="<?php echo date("d/m/Y"); ?>" size="10"/>
                                 </p>
                                 <p> 
                                     <label for="emailsignup" class="uname"  >Tipo de Transacción</label>
