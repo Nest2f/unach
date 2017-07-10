@@ -15,7 +15,7 @@
     <body>   
 
         <?php
-        $conex = mysqli_connect('localhost', 'Nest', '12345', 'fs_unach_sistemas');
+        include '../connect_db.php';
         $op = isset($_REQUEST['filtro']) ? $_REQUEST['filtro'] : null;
         $btxt = isset($_REQUEST['btntxt']) ? $_REQUEST['btntxt'] : null;
 //        echo "<a href='documentos_adm.php' style='border-style: none;box-shadow: none;' > <img src='../imagenes/regresar.png' width='60' height='60' > </a><div id='cuadro'>";

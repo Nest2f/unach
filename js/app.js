@@ -83,8 +83,10 @@ $(document).ready(function () {
         var file = inputFileImage.files[0];
         var url = './UploadFiles.php';
         var Nume_Documento = documento_id;
+//        var Directorio_Documento = documento_directorio;
          data.append('archivo',file);//para el 
         data.append('Nume_Documento', Nume_Documento);
+//        data.append('Directorio_Documento', Directorio_Documento);
         
         var notify = $.notify('Updating Do not close this page...', {
             allow_dismiss: false,

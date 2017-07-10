@@ -22,6 +22,8 @@ $row= mysqli_fetch_array($qry);
         <link rel="stylesheet" type="text/css" href="../css/estilocuerpo.css" />
         <link rel="stylesheet" type="text/css" href="../css/hojadeestilos_1.css" />
         <link rel="stylesheet" type="text/css" href="../css/links.css" />
+        <link rel="stylesheet" type="text/css" href="../css/tcal.css" />
+        <script type="text/javascript" src="../js/tcal.js"></script> 
                  <script>
                   function validar()
             {       
@@ -30,13 +32,23 @@ $row= mysqli_fetch_array($qry);
                    alert("Ingrese sus Nombres");
                    datos.nombres.focus();
                    return false;
-               }
+               }else{
+               if(!/^[A-Za-z\s\xF1\xD1]+$/.test(datos.nombres.value)){
+                   alert('Solo letras  por favor');
+                   datos.nombres.focus();
+                   return false;
+               }}
                 if(!datos.apellidos.value)
                {
                    alert("Ingrese sus Apellidos");
                    datos.apellidos.focus();
                    return false;
-               }
+               }else{
+               if(!/^[A-Za-z\s\xF1\xD1]+$/.test(datos.apellidos.value)){
+                   alert('Solo letras  por favor');
+                   datos.apellidos.focus();
+                   return false;
+               }}
                if(!datos.cedula.value)
                {
                    alert("Ingrese su Cédula");
@@ -89,6 +101,13 @@ $row= mysqli_fetch_array($qry);
                    alert("Ingrese la Fecha de Nacimiento");
                    datos.fechanacimiento.focus();
                    return false;
+               }else
+               {
+                   if(!/^(19|20)+([0-9]{2})([-])([0-9]{1,2})([-])([0-9]{1,2})$/.test(datos.fechanacimiento.value)){
+                     alert(" Fecha de nacimiento Invalido");
+                   datos.fechanacimiento.focus();
+                   return false;  
+                   }
                }
                if(!datos.rad1[0].checked && !datos.rad1[1].checked )
              {
@@ -161,7 +180,7 @@ $row= mysqli_fetch_array($qry);
             </td><tr><td id="td_2">
             <p> 
             <label for="fechainicio" class="youpasswd" data-icon="e" > Fecha de Nacimiento </label>
-            <input name="fechanacimiento" type="mail" placeholder="ejm: 1994-01-03" value="<?php echo $row['Us_Fecha_Nacimiento'];  ?>" />
+            <input name="fechanacimiento" type="text" class="tcal" placeholder="ejm: 1994-01-03" value="<?php echo $row['Us_Fecha_Nacimiento'];  ?>" />
             </p>
             <p> 
             <label for="sexoinicio" class="uname" > Sexo</label>
