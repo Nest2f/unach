@@ -14,7 +14,7 @@ $typ = $_FILES['ar']['type'];
 
 if ($file != "") {
 
-    $dir = "./documentos/";
+    $dir = "../vista/documentos/";
     move_uploaded_file($_FILES['ar']['tmp_name'], "documentos/" . $_FILES['ar']['name']);
     $ar = $_FILES['ar']['name'];
 } else {

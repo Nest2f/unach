@@ -10,6 +10,7 @@ and open the template in the editor.
         <title>Documentos</title>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />	
         <link rel="stylesheet" type="text/css" href="../css/style_lista_1.css">
+        <link rel="stylesheet" href="../css/links.css">
         <script>
             function validar()
             {
@@ -42,6 +43,11 @@ and open the template in the editor.
                 color:#aaa;            
             }
         </style>
+        <script>
+            function abrir(url) {
+                open(url, '', 'top=900,left=900,width=900,height=900');
+            }
+        </script>
     </head>
     <body>
         <?php
@@ -53,14 +59,7 @@ and open the template in the editor.
         <div id="cuadro">
             <a href="menu.php" style="border-style: none;box-shadow: none;"> <img src="../imagenes/regresar.png" width="60" height="60"> </a>
             <center><img src="../imagenes/folder.png"  height="60" width="60"><br>
-                <form name="datos1" method="post" action="dcmts/mdf_doc.php" enctype="multipart/form-data" onsubmit=" return validar1(this)">
-                    <label><h1><b>FILTRAR LISTA</b></h1></label>
-                    <p class="login button"> 
-                        <label>MODIFICAR DOCUMENTO:</label>
-                        <input type="text" name="btntxt1" placeholder="UNACH-1234">
-                        <input type="submit" name="btn_f1" value="MODIFICAR">
-                    </p><br>
-                </form>
+                
                 <form name="datos" method="post" action="datos_filtrados.php" enctype="multipart/form-data" onsubmit=" return validar(this)">
                     <p class="login button"> 
                         <label>TIPO DE PARÁMETRO:</label>           
@@ -85,67 +84,35 @@ and open the template in the editor.
             <table>
                 <thead>
                     <tr class="centro">                        
-                            <td>Número de Documento</td> 
-                            <td>Adjunto</td>
-                            <td>Descripción del Documento</td>
+                            <td>Tipo de Documento</td>                            
                             <td>Emisor</td>
-                            <td>Enviado/Recibido</td>
-                            <td>Realizado Por</td>
-                            <td>Fecha de Archivación</td>
                             <td>Fecha del Documento</td>
-                            <td>Estado del Documento</td>
-                            <td>Tipo</td>
-                            <td>Carpeta</td>
-                            <td>Area</td>
-                            <td>Fila</td>
-                            <td>Columna</td></tr>
+                            <td>Número de Documento</td>
+                            <td>Estado del Documento</td>                            
+                            <td>Fecha de Archivación</td>
                 <tbody>
                     <?php while ($row = $qry->fetch_assoc()) { ?>
                             <tr>
-                                <td><a  href="visualizar_documento.php?id=<?php echo $row['Nume_Documento']; ?>" >
-                                        <?php echo $row['Nume_Documento']; ?>
-                                    </a>
-                                </td>
-                                <td><?php echo $row['Direc_Doc_Adjunto']; ?>
+                                <td><?php echo $row['Nombre_Tipo']; ?>
+                                </td> 
+                                <td><?php echo $row['Descripcion_Emisor']; ?>
                                 </td>                                                        
                                 <td>
-                                    <?php echo $row['Descrip_Documento']; ?>						
+                                    <?php echo $row['Fecha_Documento']; ?>						
                                 </td>
-                                <td>
-                                    <?php echo $row['Descripcion_Emisor']; ?>
+                                <td><a href="javascript:abrir('../vista/visualizar_documento.php?id=<?php echo $row['Nume_Documento']; ?>')"><?php echo $row['Nume_Documento']; ?> </a></td>
+                           
+                               <td>
+                                    <?php echo $row['Nombre_Estado_Documento']; ?>
+                                    
                                 </td>
-                                <td>
-                                    <?php echo $row['Descripcion']; ?>
-                                </td>
-                                <td>
-                                    <?php echo $row['Realizado_por']; ?>
-                                </td>                                                        
+                                                                                      
                                 <td>
                                     <?php echo $row['Fecha_Archivacion']; ?>
                                 </td>
-                                <td>
-                                    <?php echo $row['Fecha_Documento']; ?>
-                                </td>
-                                <td>
-                                    <?php echo $row['Nombre_Estado_Documento']; ?>
-                                </td>
-                                <td>
-                                    <?php echo $row['Nombre_Tipo']; ?>
-                                </td>
+                               
 
-                                <td>
-                                    <?php echo $row['Nombre_Carpeta']; ?>
-                                </td>
-                                <td>
-                                    <?php echo $row['Area']; ?>
-                                </td>
-                                <td>
-                                    <?php echo $row['Fila']; ?>
-                                </td>
-                                <td>
-                                    <?php echo $row['Columna']; ?>
-                                </td>
-                            </tr>
+                                </tr>
                         <?php } ?>
                 </tbody>
             </table>
