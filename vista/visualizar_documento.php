@@ -19,7 +19,7 @@ and open the template in the editor.
         if ($dato = mysqli_fetch_array($coin)) {
             if ($dato['Directorio_Documento'] == "") {
                 ?>
-                <p>NO tiene archivos</p>
+                <p>No tiene archivos</p>
     <?php } else { ?>
                 <table border=1 align="center"><tr><td>
                             <iframe src="documentos/<?php echo $dato['Directorio_Documento']; ?>" height=900 width=900 ></iframe>
