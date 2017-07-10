@@ -76,6 +76,12 @@
             session_destroy();
             echo "<script>location.href='../main.php'</script>";
         }
+        else{
+            if (!isset($_COOKIE['nueva'])) {
+                echo "<script>alert('Su sesión ha expirado!');</script>";
+                header ("location:../main.php");
+            }
+        }
         ?>
     </head>
     <body>       

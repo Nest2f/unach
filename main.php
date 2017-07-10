@@ -3,7 +3,7 @@
 require_once './connect_db.php';
 if (isset($_COOKIE['nueva'])) {
     session_start();
-    switch ($_SESSION['Id_Tipo_Usuario']) {
+    switch ($_SESSION['nueva']) {
         case 1:
             header("refresh:0;url=administrador/menu.php");
             break;
