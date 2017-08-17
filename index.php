@@ -35,7 +35,7 @@ and open the template in the editor.
                 </div>
                 <nav id="nav">
                     <ul>						
-                        <li class="active"><a href="acerca_de.php">Acerca de </a></li>
+<!--                        <li class="active"><a href="acerca_de.php">Acerca de </a></li>-->
                         <li class="active"><a href="mision_vision.php">Misión y Visión</a></li>
                         <li class="active"><a href="main.php">Iniciar Sesión</a></li>
                     </ul>
@@ -66,7 +66,7 @@ and open the template in the editor.
                             </header>
                             <ul class="style">
                                 <li>
-                                    <p class="posted">Julio 18, 2016  |  Por: Xavier Minango</p>
+                                    <p class="posted">Julio 18, 2016  |  Por: Xavier Minango & Pablo Calapucha</p>
                                     <p>Este <strong>Sistema de Administración de Archivos</strong>, ha sido creado con el fin de mejorar el procedimiento de registro de los documentos enviados y recibidos en las oficinas de la Facultad de Ingenieria en Sistemas y Computación. Para ingresar al sistema como invitado  <a href="./invitado/mostrar_documentos_inv.php">click aquí</a> para ingresar como Usuario del Sistema <a href="./principal.php">click aquí</a>.</p>
 
                                 </li>								

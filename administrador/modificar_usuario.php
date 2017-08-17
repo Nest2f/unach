@@ -1,6 +1,6 @@
  <?php
             include '../connect_db.php';
-	 $nombres = isset($_POST['nombres'])?$_POST['nombres']:null;
+	$nombres = isset($_POST['nombres'])?$_POST['nombres']:null;
 	$apellidos=isset($_POST['apellidos'])?$_POST['apellidos']:null;
         $cedula=isset($_POST['cedula'])?$_POST['cedula']:NULL;
         $contrasenia=md5(isset($_POST['contrasenia'])?$_POST['contrasenia']:null);

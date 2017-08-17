@@ -78,8 +78,8 @@
         }
         else{
             if (!isset($_COOKIE['nueva'])) {
-                echo "<script>alert('Su sesión ha expirado!');</script>";
-                header ("location:../main.php");
+                echo '<script>alert("Su sesión ha expirado!");</script>';
+                echo "<script>location.href='../main.php'</script>";
             }
         }
         ?>

@@ -23,7 +23,10 @@ if ($dato > 0) {
     echo '<script>alert("Se encontraron coincidencias con la cédula!");</script> ';
     header("refresh:0; url=Usuarios.php");
 } else {
-    if ($contrasenia == $repcontrasenia) {
+//    if ($contrasenia == $repcontrasenia) {
+//        $inser = "INSERT INTO usuario(Us_Nombres,Us_Apellidos,Us_Cedula,Us_Password,Us_repetir_password,Us_Correo_electronico,Us_Fecha_Nacimiento,Us_Sexo,Us_Telefono,Id_Tipo_Usuario,Us_Direccion,Id_Departamento,Estado_Cuenta) values('$nombres','$apellidos','$cedula','$contrasenia','$repcontrasenia1','$correoelectronico','$fechanacimiento','$sexo','$telefono','$tipousuario','$direccion','$depart','$esc');";
+//        mysqli_query($conex, $inser);
+if ($contrasenia == $repcontrasenia) {
         $inser = "INSERT INTO usuario(Us_Nombres,Us_Apellidos,Us_Cedula,Us_Password,Us_repetir_password,Us_Correo_electronico,Us_Fecha_Nacimiento,Us_Sexo,Us_Telefono,Id_Tipo_Usuario,Us_Direccion,Id_Departamento,Estado_Cuenta) values('$nombres','$apellidos','$cedula','$contrasenia','$repcontrasenia1','$correoelectronico','$fechanacimiento','$sexo','$telefono','$tipousuario','$direccion','$depart','$esc');";
         mysqli_query($conex, $inser);
         //            INVITADO

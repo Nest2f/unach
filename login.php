@@ -42,7 +42,7 @@ if ($validar != FALSE) {
     switch ($_SESSION['Id_Tipo_Usuario']) {
         case 1:
             if ($_SESSION['Estado_Cuenta'] == 1) {
-                setcookie('nueva','1', time() + 30, "/");
+                setcookie('nueva','1', time() + 3000, "/");
                 $_SESSION['nueva']='1';
                 header('Location: administrador/menu.php');
             } else {
@@ -53,7 +53,7 @@ if ($validar != FALSE) {
             break;
         case 2:
             if ($_SESSION['Estado_Cuenta'] == 1) {
-                setcookie('nueva','2', time() + 30, "/");
+                setcookie('nueva','2', time() + 3000, "/");
                 $_SESSION['nueva']='2';
                 header('Location: secretaria/menu.php');
             } else {
@@ -63,7 +63,7 @@ if ($validar != FALSE) {
             break;
         case 3:
             if ($_SESSION['Estado_Cuenta'] == 1) {
-                setcookie('nueva','3', time() + 30, "/");
+                setcookie('nueva','3', time() + 3000, "/");
                 $_SESSION['nueva']='3';
                 header('Location: docente/menu.php');
             } else {

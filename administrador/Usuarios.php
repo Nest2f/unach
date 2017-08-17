@@ -17,7 +17,9 @@ and open the template in the editor.
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="../css/estilocuerpo.css" />
         <link rel="stylesheet" type="text/css" href="../css/hojadeestilos_1.css" />
-        <link rel="stylesheet" type="text/css" href="../css/links.css" />        
+        <link rel="stylesheet" type="text/css" href="../css/links.css" />      
+        <link rel="stylesheet" type="text/css" href="../css/tcal.css" />
+        <script type="text/javascript" src="../js/tcal.js"></script> 
         <script>
             function validar()
             {
@@ -170,7 +172,7 @@ and open the template in the editor.
                             </td><td id="td_2">
                                 <p> 
                                     <label for="fechainicio" class="youpasswd" data-icon="e" > Fecha de Nacimiento </label>
-                                    <input name="fechanacimiento" type="mail" placeholder="ejm: 1994-01-03"/>
+                                    <input name="fechanacimiento" type="text" class="tcal" placeholder="ejm: 1994-01-03"/>
                                 </p>
                                 <p> 
                                     <label for="sexoinicio" > Sexo</label>

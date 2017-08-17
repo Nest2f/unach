@@ -60,7 +60,7 @@ and open the template in the editor.
                 </div>
                 <div class="ventanaDatos botones">
                     <button id="salir" class="btn btn-danger glyphicon glyphicon-remove" > Cancelar</button>
-                    <button  id="updatefilenow"class="btn btn-info glyphicon glyphicon-floppy-open">Actualizar</button>
+                    <button  id="updatefilenow"class="btn btn-info glyphicon glyphicon-floppy-open"> Actualizar</button>
                 </div>
             </div>
         </div>
@@ -84,7 +84,7 @@ and open the template in the editor.
                             <option value="6"> Archivado Por</option>
                         </select>            
                         <label>PARÁMETRO:</label>
-                        <input type="text" name="btntxt" style="color: black" value="<?php echo $_SESSION['Us_Apellidos'] . ' ' . $_SESSION['Us_Nombres']; ?>">
+                        <input type="text" name="btntxt" style="color: black" value="">
                         <input type="submit" name="btn_f" value="BUSCAR" class="btn-default">
                     </p>
                 </form><br></center>              

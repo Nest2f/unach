@@ -8,9 +8,13 @@ $qry = mysqli_query($conex, $res);
 $row = mysqli_num_rows($qry);
 if ($row > 0) {
     echo '<script>alert("El ID ya fue asignado a un emisor!")</script> ';
+    header("refresh:0;url=msr_view.php");
 } else {
     $insert = "INSERT INTO emisor_documento (Id_Emisor, Descripcion_Emisor) values ('$id','$desc');";
     mysqli_query($conex, $insert);
     echo '<script>alert("Se ha ingresado correctamente el Emisor!")</script> ';
+    header("refresh:0;url=msr_view.php");
 }
-header("refresh:0;url=msr.html");
+
+
+

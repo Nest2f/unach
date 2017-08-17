@@ -176,13 +176,13 @@ and open the template in the editor.
                                 </p>
                                 <p> 
                                     <label for="fechainicio" class="youpasswd" data-icon="e" > Documento Digital </label>
-                                    <input name="ar" type="file" placeholder="ejm: ....."/>
+                                    <input name="ar" type="file" accept="application/pdf" placeholder="ejm: ....."/>
                                 </p>
 
                             </td><tr><td id="td_2">
                                 <p> 
                                     <label for="telefonoinicio" class="uname" data-icon="e" > Documento Adjunto </label>
-                                    <input name="adjuntar" type="file" placeholder="Ejm: Dirección del Archivo"/>
+                                    <input name="adjuntar" type="file" accept="application/pdf" placeholder="Ejm: Dirección del Archivo"/>
                                 </p>
                                 <p> 
                                     <label for="fechainicio" class="youpasswd" data-icon="e" > Fecha de la Archivación </label>

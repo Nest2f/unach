@@ -15,7 +15,7 @@ $typ = $_FILES['ar']['type'];
 
 if ($file != "") {
 
-    $dir = "./documentos/";
+    $dir = "./var/www/html/ojs/documentos/";
     move_uploaded_file($_FILES['ar']['tmp_name'], "documentos/" . $_FILES['ar']['name']);
     $ar = $_FILES['ar']['name'];
 } else {
@@ -39,13 +39,19 @@ if ($dato > 0) {
     echo "<script> alert('El número de documento ya existe!');</script>";
     header("refresh:0; url=../secretaria/registrar_documento.php");
 } else {
+    try {
     $inser = "INSERT INTO documento(Nume_Documento, Fecha_Documento, Emisor, Id_Estado_Documento, Id_Tipo_Documento, Descrip_Documento, Directorio_Documento, Direc_Doc_Adjunto, Fecha_Archivacion, Id_Tipo_Accion, Id_Carpeta, Area, Fila, Columna, Realizado_por, fk_id_usuario) VALUES ('$nume_documento','$fecha_documento','$emisor','$estado_documento','$tipo_documento','$descripcion_documento','$file','$direc_doc_adjunto','$fecha_archivacion','$tipo_Accion','$carpeta','$area','$fila','$columna','$realizado_por','$id_usuario');";
 
     if (mysqli_query($conex, $inser) == TRUE) {
         echo "<script> alert('Se ha registrado correctamente!');</script>";
         header("refresh:0; url=../secretaria/registrar_documento.php");
     } else {
-        echo "<script> alert('No se pudo realizar el registro!');</script>";
-        header("refresh:0; url=../secretaria/registrar_documento.php");
+       echo "<script> alert('No se pudo realizar el registro!');</script>";
+        header("refresh:0; url=../secretaria/registrar_documento.php");        
     }
+    }  catch (Exception $ex)
+    {}
+    
 }
+
+

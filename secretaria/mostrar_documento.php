@@ -73,7 +73,7 @@ and open the template in the editor.
                             <option value="6"> Archivado Por</option>
                         </select>            
                         <label>PARÁMETRO:</label>
-                        <input type="text" name="btntxt" value="<?php echo $_SESSION['Us_Apellidos'] . ' ' . $_SESSION['Us_Nombres']; ?>">
+                        <input type="text" name="btntxt" value="">
                         <input type="submit" name="btn_f" value="BUSCAR">
                     </p>
                 </form>
